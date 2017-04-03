@@ -28,6 +28,7 @@
         .dropdown-menu>li>a:hover{
             color:#333;
         }
+        
     </style>
 
     <!--[if IE]>
@@ -39,7 +40,7 @@
 <body>
     
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
+        <div class="container" style="margin-top:10px;margin-bottom:10px;font-size:18px">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -109,30 +110,33 @@
                 <div class="item active" id="carou">
                   <img  src="src/Images/Carousal/1.jpeg" alt="...">
                   <div class="carousel-caption">
-                    ...
+                    <h1>A Whole New Platform For Interior Desginer</h1>
                   </div>
                 </div>
                 <div class="item" id="carou">
-                  <img src="src/Images/Carousal/2.jpeg" alt="...">
-                  <div class="carousel-caption">
-                                        </div>
+                    <img src="src/Images/Carousal/2.jpeg" alt="...">
+                    <div class="carousel-caption">
+                                        
+                    </div>
                 </div>
                 <div class="item" id="carou">
-                  <img src="src/Images/Carousal/3.jpeg" alt="...">
-                  <div class="carousel-caption">
-                                        </div>
+                    <img src="src/Images/Carousal/3.jpeg" alt="...">
+                    <div class="carousel-caption">
+                    
+                    </div>
                 </div>
                 <div class="item" id="carou">
-                  <img src="src/Images/Carousal/4.jpeg" alt="...">
-                  <div class="carousel-caption">
-                                        </div>
+                    <img src="src/Images/Carousal/4.jpeg" alt="...">
+                    <div class="carousel-caption">
+                    
+                    </div>
                 </div>
                 <div class="item" id="carou">
-                  <img src="src/Images/Carousal/5.jpg" alt="...">
-                  <div class="carousel-caption">
-                  </div>
+                    <img src="src/Images/Carousal/5.jpg" alt="...">
+                    <div class="carousel-caption">
+                    
+                    </div>
                 </div>
-                ...
               </div>
 
               <!-- Controls -->
@@ -158,7 +162,6 @@
                 <h4>.col-md-4 .col-md-offset-4</h4>
             </div>
         </div>
-    
         <div class="row" style="width:1360px;">
             <div class="col-md-4"  id="box21-options">
                 <img src="src/google.png" width="250px" height="210px" style="padding-left:0px;">
