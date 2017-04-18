@@ -1,26 +1,5 @@
-<?php
-session_start();
-if(isset($_SESSION['false'])){
-    echo '<script>alert("Username Or Password is incorrect");</script>';
-    unset($_SESSION['false']);
-    //session_destroy();
-}
-if(isset($_SESSION['created'])){
-    echo '<script>alert("Your Accout Created Successfully");</script>';
-    unset($_SESSION['created']);
-    //session_destroy();
-}
-if(isset($_SESSION['failure'])){
-    echo '<script>alert("FAILURE!!!");</script>';
-    unset($_SESSION['failure']);
-    //session_destroy();
-}
-if(isset($_SESSION['tryagain'])){
-    echo '<script>alert("That User Id Already Exist! Please try Again");</script>';
-    unset($_SESSION['tryagain']);
-    //session_destroy();
-}
-?>
+
+
 <!DOCTYPE html>
 <html lang="">
     <head>
@@ -39,6 +18,7 @@ if(isset($_SESSION['tryagain'])){
         <script>
             new WOW().init();
         </script>
+
         <!--[if IE]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -47,6 +27,7 @@ if(isset($_SESSION['tryagain'])){
 
     <body>
         <?php
+        session_start();
         if(!isset($_SESSION["sess_user"])){
             //header("Location: login.php");"id=\"jhbsa\""
             $content='
@@ -61,7 +42,7 @@ if(isset($_SESSION['tryagain'])){
         else{
             $content='
             <li>
-                <a href="index.php" style="color:lightgrey;text-transform:capitalize;">Hello '.$_SESSION['sess_user'].'</a>
+                <a href="index.php" style="color:lightgrey;">Hello '.$_SESSION['sess_user'].'</a>
             </li>
             <li>
                 <a href="logout.php">Logout</a>
@@ -78,12 +59,12 @@ if(isset($_SESSION['tryagain'])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Designer</a>
+                <a class="navbar-brand" href="index.html">Designer</a>
             </div>
 
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.php">Home</a></li>
+                    <li class="active"><a href="#">Home</a></li>
                     <li class="dropdown">
                         <a href="#contact" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
                         <ul class="dropdown-menu" style="background-color:#333;">
@@ -152,8 +133,8 @@ if(isset($_SESSION['tryagain'])){
                                 <div class="error"></div>
                                 <div class="form loginBox">
                                     <form method="post" action="login.php" accept-charset="UTF-8">
-                                        <input class="form-control" type="text" placeholder="User Id" name="user" required>
-                                        <input class="form-control" type="password" placeholder="Password" name="pass" required>
+                                        <input class="form-control" type="text" placeholder="User Id" name="user">
+                                        <input class="form-control" type="password" placeholder="Password" name="pass">
                                         <input class="btn-login" type="submit" value="Login" >
                                     </form>
                                 </div>
@@ -163,12 +144,12 @@ if(isset($_SESSION['tryagain'])){
                             <div class="content registerBox" style="display:none;">
                                 <div class="form">
                                     <form method="post" html="{:multipart=>true}" data-remote="true" action="registration.php" accept-charset="UTF-8">
-                                        <input class="form-control" type="text" placeholder="User Id" name="Id" required>
-                                        <input class="form-control" type="text" placeholder="Full Name" name="Name" required>
-                                        <input class="form-control" type="text" placeholder="Age" name="Age" required>
-                                        <input class="form-control" type="text" placeholder="Email" name="Email" required>
-                                        <input class="form-control" type="password" placeholder="Password" name="Pass" required>
-                                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="pass_confirm" required>
+                                        <input class="form-control" type="text" placeholder="User Id" name="Id">
+                                        <input class="form-control" type="text" placeholder="Full Name" name="Name">
+                                        <input class="form-control" type="text" placeholder="Age" name="Age">
+                                        <input class="form-control" type="text" placeholder="Email" name="Email">
+                                        <input class="form-control" type="password" placeholder="Password" name="Pass">
+                                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
                                         <input class="btn-register" type="submit" value="Create account" name="commit">
                                     </form>
                                 </div>
